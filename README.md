@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # create-express-react
 
@@ -116,3 +117,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 This project is licensed under the MIT License.
 
 
+=======
+# b04901110_chat_box_ver2
+>>>>>>> afac1ecb170b0d94774533d9093b11e500d0940a
