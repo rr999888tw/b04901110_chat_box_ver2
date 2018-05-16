@@ -47,8 +47,8 @@ app.use('/api/v1', routes.api_v1);
 app.use('/page', routes.page);
 
 
-import router from './ver1';
-app.use('/users', router)
+import usersR from './users';
+app.use('/users', usersR)
 
 // Load React App
 // Serve HTML file for production

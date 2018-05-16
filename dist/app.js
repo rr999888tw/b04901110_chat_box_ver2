@@ -40,9 +40,9 @@ var _routes = require('./routes');
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _ver = require('./ver1');
+var _users = require('./users');
 
-var _ver2 = _interopRequireDefault(_ver);
+var _users2 = _interopRequireDefault(_users);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -84,7 +84,7 @@ app.use('/static', _express2.default.static(_path2.default.join(__dirname, 'publ
 app.use('/api/v1', _routes2.default.api_v1);
 app.use('/page', _routes2.default.page);
 
-app.use('/users', _ver2.default);
+app.use('/users', _users2.default);
 
 // Load React App
 // Serve HTML file for production

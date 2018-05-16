@@ -39,7 +39,12 @@ class App extends Component {
 
   componentDidMount() {
     let polling = () => {
-      if (this.state.user === "" || this.state.personInTalk === "") return;
+      if (this.state.user === "" || this.state.personInTalk === "") {
+        this.setState({
+          messageList: []
+        })
+        return;
+      }
       else return (fetch(`/users/${this.state.user}/${this.state.personInTalk}`)
         .then((response) => response.json())
         .then((responseJson) => {
@@ -95,6 +100,7 @@ class App extends Component {
     let userIdx = this.state.PplList.findIndex((ele) => { return ele === name; });
     this.setState({
       user: name,
+      personInTalk: "",
       contactList: this.state.PplList.slice(0, userIdx).concat(this.state.PplList.slice(userIdx + 1, this.state.PplList.length))
     })
 
